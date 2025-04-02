@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Автоматическое скачивание файла</title>
+    <title>Скачивание файла</title>
 </head>
 <body>
+    <h1>Нажмите кнопку для скачивания</h1>
+    <button onclick="downloadFile()">Скачать файл</button>
+
     <script>
-        window.onload = function() {
+        function downloadFile() {
             var link = document.createElement('a');
-            link.href = 'https://<vangelo1>.github.io/<auto-download-file>/example.zip';  // Путь к файлу
+            link.href = 'https://vangelo1.github.io/auto-download-file/example.zip';  // Путь к вашему файлу
             link.download = '';  // Пустое значение заставляет скачать файл с его исходным именем
-            document.body.appendChild(link);
             link.click();
-            document.body.removeChild(link);
-        };
+        }
     </script>
 </body>
 </html>
